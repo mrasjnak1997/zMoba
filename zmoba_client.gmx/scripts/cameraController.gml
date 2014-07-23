@@ -1,10 +1,10 @@
-if (keyboard_check(keyCamUp))
+if (keyboard_check(keyCamUp) || mouse_y < view_yview + camEdge )
     view_yview -= camSpeed;
-if (keyboard_check(keyCamDown))
+if (keyboard_check(keyCamDown) || mouse_y > view_yview + view_hview - camEdge)
     view_yview += camSpeed;
-if (keyboard_check(keyCamLeft))
+if (keyboard_check(keyCamLeft) || mouse_x < view_xview + camEdge )
     view_xview -= camSpeed;
-if (keyboard_check(keyCamRight))
+if (keyboard_check(keyCamRight) || mouse_x > view_xview + view_wview - camEdge)
     view_xview += camSpeed;
     
 if (view_xview < 0)
