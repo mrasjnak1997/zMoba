@@ -5,9 +5,20 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprPlayer</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\objMenu</object>
+    <object>objects\objPlayer</object>
+    <object>objects\objServer</object>
+    <object>objects\objClient</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rmMain</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
