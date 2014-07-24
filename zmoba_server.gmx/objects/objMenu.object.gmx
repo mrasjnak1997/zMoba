@@ -26,6 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>instance_create(0, 0, objServer);
+<<<<<<< HEAD
+<<<<<<< HEAD
+global.type = "server";
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
 instance_destroy();
 </string>
           </argument>
@@ -50,6 +57,13 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>instance_create(0, 0, objClient);
+<<<<<<< HEAD
+<<<<<<< HEAD
+global.type = "client";
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
 instance_destroy();
 </string>
           </argument>

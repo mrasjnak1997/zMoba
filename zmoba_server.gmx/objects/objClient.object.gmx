@@ -32,7 +32,15 @@ for(i = 0; i &lt; 10; i += 1)
 {
     players[i] = instance_create(-100, -100, objPlayer);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+clients = ds_map_create();
+=======
 
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
 eid = 0;
 created = false;
 </string>
@@ -57,6 +65,21 @@ created = false;
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <string>if(client == ds_map_find_value(async_load, "id"))
+{
+    var buff = ds_map_find_value(async_load, "buffer");
+    var type = buffer_read(buff, buffer_string);
+
+    if(type == "player")
+    {
+        var i = buffer_read(buff, buffer_s16);
+        players[i].x = buffer_read(buff, buffer_s16);
+        players[i].y = buffer_read(buff, buffer_s16);
+=======
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
             <string>if(ds_map_find_value(async_load, "id") == client)
 {
     eid = buffer_read(ds_map_find_value(async_load, eid), buffer_u16);
@@ -76,6 +99,10 @@ if(t == network_type_data)
         players[iid].x = buffer_read(buff, buffer_s16);
         players[iid].y = buffer_read(buff, buffer_u32);
         
+<<<<<<< HEAD
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
     }
 }
 </string>
@@ -109,6 +136,11 @@ network_send_packet(client, buff, buffer_tell(buff));
         </arguments>
       </action>
     </event>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -132,6 +164,10 @@ network_send_packet(client, buff, buffer_tell(buff));
         </arguments>
       </action>
     </event>
+<<<<<<< HEAD
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

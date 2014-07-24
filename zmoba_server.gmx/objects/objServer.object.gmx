@@ -55,6 +55,17 @@ for(i = 0; i &lt; 10; i += 1)
           <argument>
             <kind>1</kind>
             <string>var t = ds_map_find_value(async_load, "type");
+<<<<<<< HEAD
+<<<<<<< HEAD
+if(t == network_type_connect)
+{
+    var sock = ds_map_find_value(async_load, "socket");
+    var inst = instance_create(20, 20, objPlayer);
+    ds_map_add(clients, sock, inst);
+    socks[players] = sock;
+=======
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
 
 if(t == network_type_connect)
 {
@@ -68,6 +79,10 @@ if(t == network_type_connect)
     var eid = players;
     buffer_write(buff, buffer_u16, eid);
     network_send_packet(sock, buff, buffer_tell(buff));
+<<<<<<< HEAD
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
     players += 1;
 }
 
@@ -75,12 +90,34 @@ if(t == network_type_disconnect)
 {
     var sock = buffer_read(ds_map_find_value(async_load, "buffer"), buffer_u16);
     ds_map_delete(clients, sock);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    socks[sock] = noone;
+=======
     socks[sock] = noone
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+    socks[sock] = noone
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
     players -= 1;
 }
 
 for(i = 0; i &lt; 10; i += 1)
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if(ds_map_exists(clients, i))
+    {
+        var inst = ds_map_find_value(clients, i);
+        var buff = buffer_create(256, buffer_grow, 1);
+        buffer_seek(buff, buffer_seek_start, 0);
+        buffer_write(buff, buffer_string, "player");
+        buffer_write(buff, buffer_s16, i);
+        buffer_write(buff, buffer_s16, inst.x);
+        buffer_write(buff, buffer_s16, inst.y);
+=======
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
     buff = buffer_create(256, buffer_grow, 1);
     buffer_seek(buff, buffer_seek_start, 0);
     if(ds_map_exists(clients, i))
@@ -89,6 +126,10 @@ for(i = 0; i &lt; 10; i += 1)
         buffer_write(buff, buffer_u16, i);
         buffer_write(buff, buffer_s16, inst.x);
         buffer_write(buff, buffer_u32, inst.y);
+<<<<<<< HEAD
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
+=======
+>>>>>>> c831fbeebe9086f5a6d446770535b6d91bbc39fc
         for(j = 0; j &lt; 10; j += 1)
         {
             if(socks[j] != noone)
