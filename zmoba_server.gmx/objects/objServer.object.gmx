@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>initServer();
+initVisionServer();
 </string>
           </argument>
         </arguments>
@@ -72,7 +73,7 @@ sendData();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(20, 20, string(players));
+            <string>draw_text(20, 20, string(ds_grid_get(visionMap, 0, 0)));
 </string>
           </argument>
         </arguments>

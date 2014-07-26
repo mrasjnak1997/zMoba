@@ -8,7 +8,6 @@
   <sprites name="sprites">
     <sprite>sprites\sprZyrus</sprite>
     <sprite>sprites\sprSolid</sprite>
-    <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sprShadow</sprite>
   </sprites>
   <backgrounds name="background">

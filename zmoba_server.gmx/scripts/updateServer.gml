@@ -1,17 +1,20 @@
-var t = ds_map_find_value(async_load, "type");
-if(t == network_type_connect)
+var type = ds_map_find_value(async_load, "type");
+if(type == network_type_connect)
 {
-    var eid = ds_map_find_value(async_load, "id");
     var inst = instance_create(players * 20, players * 20, objPlayer);
-    ds_map_add(clients, players, inst);
-    socks[players] = ds_map_find_value(async_load, "socket");
+    var sock = ds_map_find_value(async_load, "socket");
+    ds_map_add(clients, sock, inst);
+    socks[players] = sock;
     players += 1;
 }
-if(t == network_type_disconnect)
+if(type == network_type_disconnect)
 {
-    var eid = ds_map_find_value(async_load, "id");
-    var inst = instance_create(players * 20, players * 20, objPlayer);
-    ds_map_add(clients, players, inst);
-    socks[players] = noone
+    var sock = ds_map_find_value(async_load, "socket");
+    with(ds_map_find_value(clients, sock))
+    {
+        instance_destroy();
+    }
+    ds_map_delete(clients, sock);
+    socks[players] = noone;
     players -= 1;
 }
